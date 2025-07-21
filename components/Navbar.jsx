@@ -1,11 +1,14 @@
 "use client";
 
 import { login, logout } from "@/lib/auth-actions";
-import { Session } from "next-auth";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Navbar({ session }: { session: Session | null }) {
+type sessionProps ={
+  session: ReactNode;
+}
+
+export default function Navbar({ session }: sessionProps}) {
   return (
     <nav className="bg-white shadow-md py-4 border-b border-gray-200">
       {" "}
@@ -22,6 +25,7 @@ export default function Navbar({ session }: { session: Session | null }) {
             <>
               <Link
                 href={"/trips"}
+                
                 className="text-slate-900 hover:text-sky-500"
               >
                 My Trips
