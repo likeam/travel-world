@@ -1,8 +1,8 @@
 "use server";
-import { signIn, signOut } from "@/auth";
+import { signIn, signOut } from "@/next-auth";
 
 export const login = async () => {
-  await signIn("github", { redirectTo: "/" });
+  await signIn("google", { redirectTo: "/" });
 };
 
 export const logout = async () => {

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { login } from "@/lib/auth-actions";
 
 export default function Navbar() {
   return (
@@ -27,7 +28,10 @@ export default function Navbar() {
             </button>
           </>
 
-          <button className="flex items-center justify-center bg-gray-800 hover:bg-gray-900 text-white p-2 rounded-sm cursor-pointer">
+          <button
+            className="flex items-center justify-center bg-gray-800 hover:bg-gray-900 text-white p-2 rounded-sm cursor-pointer"
+            onClick={login}
+          >
             <span className="relative flex items-center justify-center gap-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
